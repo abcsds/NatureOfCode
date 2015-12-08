@@ -7,12 +7,7 @@ class Walker():
         stroke(0)
         point(self.x, self.y)
     def step(self):
-        choice = int(random(4))
-        if choice == 0:
-            self.x += 1
-        elif choice == 1:
-            self.x -= 1
-        elif choice == 2:
-            self.y += 1
-        else:
-            self.y -= 1
+        stepx = random(-1, 1)
+        stepy = random(-1, 1)
+        self.x += stepx
+        self.y += stepy
