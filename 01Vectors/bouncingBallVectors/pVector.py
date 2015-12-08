@@ -1,6 +1,6 @@
-class PVpctor(x, y):
-    """docstring for """
-    def __init__(self, arg):
+class PVector(x, y):
+    """2D vector"""
+    def __init__(self, x, y):
         self.x = x
         self.y = y
     def add(PVector v):
