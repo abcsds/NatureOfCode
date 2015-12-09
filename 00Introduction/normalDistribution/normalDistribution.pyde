@@ -8,7 +8,6 @@ def draw():
     mean = 320
 
     x = sd * num + mean
-    print x
 
     noStroke()
     fill(255, 10)
