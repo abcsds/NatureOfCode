@@ -7,10 +7,15 @@ class Walker():
         stroke(0)
         point(self.x, self.y)
     def step(self):
-        sd = 3
-        mean = 10
-        stepSize = randomGaussian() * sd + mean
+        stepSize = self.montecarlo(20)
         stepx = random(-stepSize, stepSize)
         stepy = random(-stepSize, stepSize)
         self.x += stepx
         self.y += stepy
+    def montecarlo(self, multiplier):
+        while True:
+            r1 = random(1)
+            probability = exp(-r1) # Modified probability
+            r2 = random(1)
+            if r2 < probability:
+                return r1 * multiplier
