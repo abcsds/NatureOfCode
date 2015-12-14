@@ -1,6 +1,6 @@
 size(400,360)
-xoff = 0.0
 loadPixels()
+xoff = 0.0
 for x in range(width):
     yoff = 0.0
     for y in range(height):
